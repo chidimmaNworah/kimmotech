@@ -5,6 +5,7 @@ import Image from 'next/image'
 import {PostCard, Heading3, Heading2, Pagination, Heading, Reviews} from '../components'
 import {getPosts, postsSearchQuery} from '../services'
 import {FeaturedPosts} from '../sections'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Home = ({posts}) => {
   // const [currentPage, setCurrentPage] = useState(1)
@@ -32,8 +33,17 @@ const Home = ({posts}) => {
         <title>FTS Blog</title>
         <link rel="icon" href="/head_icon.svg" />
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossOrigin="anonymous"
+        />
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script noModule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://unpkg.com/react/umd/react.production.min.js" crossOrigin></script>
+        <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js" crossOrigin></script>
+        <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js" crossOrigin></script>
       </Head>
 
       
@@ -70,7 +80,7 @@ const Home = ({posts}) => {
       <Heading />
 
 
-      <h1 className="text-5xl text-[#4D4D4D] text-center font-bold font-serif mb-10">Our Portfolio</h1>
+      <h1 className="text-5xl text-[#4D4D4D] text-center font-bold font-serif mb-10 mt-20">Our Portfolio</h1>
 
       <FeaturedPosts className="lg:mx-20 lg:px-20 mb-8" />
 
@@ -87,7 +97,7 @@ const Home = ({posts}) => {
 
 
       <Heading3 />
-      <Reviews />
+      {/* <Reviews /> */}
     </div>
   )
 }

@@ -10,9 +10,9 @@ const PostCard = ({post}) => {
           <img 
             src={post.featuredImage.url} 
             alt={post.title}
-            className="object-top h-full w-full rounded-t-lg"
+            className="object-fill h-full w-full rounded-lg"
           /> 
-          <div>{post.title}</div>
+          <div>{post.excerpt}</div>
         </div>
       </Link>
     </div>

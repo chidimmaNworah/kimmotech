@@ -5,7 +5,7 @@ const Heading2 = () => {
   return (
     <div className='w-full mx-0'>
     <div className="container w-full mx-auto px-4">
-      <div className="flex mb-40 items-end text-[#4D4D4D] font-serif">
+      <div className="flex mb-20 items-end text-[#4D4D4D] font-serif">
         <div className="flex items-center">
 
         <img src="done.png" alt="fts" className="heading1"/>
@@ -40,6 +40,7 @@ const Heading2 = () => {
         </div>
       </div>
     </div>
+    <hr />
     </div>
   )
 }

@@ -3,9 +3,9 @@ import Link from 'next/link'
 
 const Heading2 = () => {
   return (
-    <div className='w-full mx-0 bg-[#fafafa]'>
+    <div className='w-full mx-0 bg-[#fafafa] mt-20'>
     <div className="container w-full mx-auto px-4">
-      <div className="flex mb-40 items-end text-[#4D4D4D] font-serif">
+      <div className="flex mb-20 items-end text-[#4D4D4D] font-serif">
         <div className="flex items-center">
           <div className="mr-5 py-5">
             <h5 className="text-lg mb-4 font-bold">
