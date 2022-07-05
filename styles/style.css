@@ -1,0 +1,151 @@
+.list{
+    margin: 4px 2px;
+    align-items: center;
+    color: white;
+    font-weight: semi-bold;
+    cursor: pointer;
+    padding: .75rem 2.5rem;
+    margin: 5px 0 5px 0;
+}
+.list:hover{
+    color: lightskyblue;
+}
+
+.active{
+    border-bottom: 2px double lightskyblue;
+}
+
+.mobile-menu-icon{
+    display: none;
+}
+.nav-links{
+    display: inline-flex;
+    /* align-items: center;
+    font-size: 1.25rem; */
+}
+
+.heading1{
+    display: flex;
+    width: 70vh;
+}
+
+.heading2{
+    display: flex;
+    width: 70vh;
+}
+.home_portfolio{
+    position: relative;
+    overflow: hidden;
+}
+
+
+.home_portfolio div{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: #4D4D4D;
+    color: white;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: all 2s linear;
+}
+
+.home_portfolio:hover{
+    cursor: pointer;
+}
+
+.home_portfolio:hover div{
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    visibility: visible;
+    opacity: 0.7; 
+}
+
+
+@media screen and (max-width: 780px) { 
+    .heading1{
+        display: none;
+    } 
+    .heading2{
+        display: none;
+    } 
+    .nav-links{
+        display: none;
+    }
+    .nav-links-mobile{
+        position: relative;
+        display: inline-block;
+        background-color: #4D4D4D;
+        color: white;
+        top: 0px;
+        transition: all 0.5s ease-out;
+        padding: 5%;
+        width: 100%;
+
+    }
+
+    .list{
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+
+    .mobile-menu-icon{
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        color: white;
+        background-color: rgb(180 83 9);
+        border: none;
+        outline: none;
+        top: 0.75rem;
+        right: 25px;
+        border-radius: 0.375rem;
+    }
+    
+}
+/* 
+.navbar{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3.75rem;
+    margin-bottom: 2rem;
+    position: sticky;
+    background-color: #006CEA;
+    top: 0px;
+    z-index: 10;
+    justify-content: space-around;
+    color: white;
+    border-bottom-width: 1px;
+    border-bottom: 1px;
+}
+
+.nav_wrapper{
+    display: flex;
+}
+
+.logo{
+    justify-content: flex-start;
+}
+
+.nav_links{
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    padding: 10px 20px;
+    cursor: pointer;
+}   
+
+@media  screen and (max-width: 480) {
+    .nav_links{
+        display: flex;
+        justify-content: flex-end;
+        
+    }   
+} */
