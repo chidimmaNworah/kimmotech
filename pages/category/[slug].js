@@ -41,9 +41,7 @@ const CategoryPost = ({ posts }) => {
         <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>
       </Head>
 
-      {categories.map((category) => (
       <h1 className="text-5xl text-[#4D4D4D] text-center font-bold font-serif mb-10">Our </h1>
-      ))}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 container mx-auto px-10 mb-8">
         <div  className='lg:col-span-12 col-span-1'>
           <div  className='grid lg:grid-cols-3 md:grid-cols-2 gap-4'>
