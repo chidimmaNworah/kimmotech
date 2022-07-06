@@ -20,25 +20,16 @@ const Header = () => {
             .then((newCategories) => setCategories(newCategories))
     }, [])
 
-    // const [isMobile, setIsMobile] = useState(false)
-
-    // const [query, setQuery] = useState()
-    // const data = getPosts()
-
-    // const search = () => {
-    //     console.log(1)
-    // }
-
     return (
         <Navbar bg="light" expand="lg" sticky="top" className="shadow-sm mb-10">
       <Container>
-        <Navbar.Brand href="/" className="fw-bold fs-2 font-serif textcolor1">Favourite Tech Solutions</Navbar.Brand>
+        <Navbar.Brand href="/" className="font-serif pr-10 textcolor1"><img src="/logo.png" alt="logo" width="100rem" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/" className={asPath === '/' ? "pb-1 border-bottom border-primary" : "pb-1"}>Home</Nav.Link>
             {/* <Nav.Link href="/portfolio" className={asPath === '/portfolio' ? "pb-1 border-bottom border-primary" : "pb-1"}>Portfolio</Nav.Link> */}
-            <Nav.Link href="/blog" className={asPath === '/blog' ? "pb-1 border-bottom border-primary" : "pb-1"}>Blog</Nav.Link>
+            <Nav.Link href="https://fts-blog.vercel.app/" target="_blank" className={asPath === 'https://fts-blog.vercel.app/' ? "pb-1 border-bottom border-primary" : "pb-1"}>Blog</Nav.Link>
             <NavDropdown title="Portfolio" id="basic-nav-dropdown">
             {categories.map((category) => (
               <NavDropdown.Item href={`/category/${category.slug}`}>{category.name}</NavDropdown.Item>

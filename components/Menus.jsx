@@ -24,9 +24,9 @@ export const support = [
     {name: 'Open-source', link: '#'}
 ]
 export const Icons = [
-    {name: 'logo-facebook', link: '#'},
-    {name: 'logo-twitter', link: '#'},
-    {name: 'logo-github', link: '#'},
-    {name: 'logo-linkedin', link: '#'},
-    {name: 'logo-Instagram', link: '#'}
+    {name: 'logo-facebook', link: 'https://www.facebook.com/favouritetechsolutions/'},
+    {name: 'logo-twitter', link: 'https://twitter.com/favouritetechs'},
+    {name: 'logo-github', link: 'https://github.com/chidimmaNworah/ftsportfolio'},
+    {name: 'logo-linkedin', link: 'www.linkedin.com/in/favour-chidimma-nworah-154217214'},
+    {name: 'logo-Instagram', link: 'https://www.instagram.com/favouritetechsolutions/'}
 ]

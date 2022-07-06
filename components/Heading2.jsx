@@ -11,7 +11,7 @@ const Heading2 = () => {
             <h5 className="text-lg mb-4 font-bold">
               WE SOLVE PROBLEMS
             </h5>
-            <h2 className="text-3xl mb-4 font-bold">
+            <h2 className="text-4xl mb-3 font-bold text-[#001973]">
               We are a creative digital agency
             </h2>
             <br />
@@ -28,7 +28,7 @@ const Heading2 = () => {
             </p>
             <div className="">
               <Link href=''>
-              <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-[#4D4D4D] text-lg font-meduim rounded text-white px-4 py-3 cursor-pointer">
+              <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-[#001973] text-lg font-meduim rounded text-white px-4 py-3 cursor-pointer">
                   Discover more
               </span>
               </Link>
