@@ -4,7 +4,7 @@ import 'react-ionicons'
 
 const Heading2 = () => {
   return (
-    <div className="bg-[#001973] lg:mx-20 md:mx-5 mb-20 rounded-lg lg:px-8 sm:px-1 font-serif">
+    <div className="container w-full mx-auto bg-[#001973] mb-20 rounded-lg lg:px-8 sm:px-1 font-serif">
         <div className="p-10 text-white text-center">
             <h3 className='mb-8 lg:text-xl text-md font-bold'>OUR</h3>
             <h1 className='mb-8 lg:text-5xl lg:font-black font-semibold text-2xl'>Core deliverables</h1>
