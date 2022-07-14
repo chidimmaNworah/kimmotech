@@ -1,5 +1,6 @@
 import React from 'react'
 import 'react-ionicons'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const contact = () => {
   return (

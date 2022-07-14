@@ -1,91 +1,45 @@
-import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import moment from 'moment';
+import Link from 'next/link';
+import {Brands, ReviewForm, Reviews} from '../components'
 
 const about = () => {
+
   return (
-    <div className='p-0 lg:p-12 pb-10 mb-8'>
-        <div className="justify-center items-center bg-blue-600 w-full p-8 sm:p-12 rounded-xl shadow-lg text-white">
-            <div className='mx-12 text-center'>
-                <h1 className="font-bold text-4xl tracking-wide">About Us</h1>
-                <p className="pt-2 text-white text-sm">
-                    <b>Urban Paparazzi</b> is a popular urban awareness magazine that regularly update our readers on the latest trends and activities happening in all urban areas in Nigeria. Our head office is located at Central Area, Abuja, Nigeria.
-                    <br />
-                    <br />
-                    We publish articles that improve the lives and relationships between you and all the people around you.
-                    <br />
-                    <br />
-                    Need to confirm a news you have heard or follow up on a story? Visit our site and seach for it. You will find proven reviews and articles that will help you make the right decisions.
-                    <br />
-                    <br />
-                    When you have a story to publish or you have suggenstions and reviews to make? Contact us to learn how to make the most of it.
-                    <br />
-                    <br />
-                    Whether you are looking for an expert to proof read or investigate a story, we ensure you of our authenticity regardless of your previous experience.
-                    <br />
-                    <br />
-                    Every piece of information published on this website is valid at the time of writing. However, we update our content regularly so that we can serve only the most accurate content.
-                    <br />
-                    <br />
-                    While we do our best to ensure the accuracy of our information, neither the website nor the author(s) will be liable for any direct or indirect damage, except indicated otherwise in the specific piece of content or download.
-                    <br />
-                    <br />
-                    Further, we claim no ownership of all logos, product/brand names, trademarks, and copyrights we mention on this website except ours of course.
-                    <br />
-                    <br />
-                    Use the form below to contact us about business, content contribution, advert placement, etc. We love hearing from you.
-                </p>
-            </div>
-        </div>
-        <div className="flex w-full min-h-screen justify-center items-center">
-        <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 bg-blue-600 w-full max-x-4xl p-8 sm:p-12 rounded-xl shadow-lg text-white">
-            <div className="flex-col space-y-6 justify-between">
-                <div>
-                    <h1 className="font-bold text-4xl tracking-wide">Contact Us</h1>
-                    <p className="pt-2 text-gray-300 text-sm">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla quos sapiente molestiae optio aliquid aspernatur deserunt blanditiis repellat dolores. Omnis veritatis dolorem quidem ad dolore quod repellendus alias exercitationem saepe.
-                    </p>
-                </div>
-                <div className='flex flex-col space-y-4'>
-                    <div><div className="inline-flex space-x-2 items-center">
-                        <ion-icon name="call-sharp" className="text-gray-300 text-xl"></ion-icon>
-                        <span>+234 907 036 1277</span>
-                    </div></div>
-                    <div><div className="inline-flex space-x-2 items-center">
-                        <ion-icon name="mail-sharp" className="text-gray-300 text-xl"></ion-icon>
-                        <span>+234 907 036 1277</span>
-                    </div></div>
-                    <div><div className="inline-flex space-x-2 items-center">
-                        <ion-icon name="location-sharp" className="text-gray-300 text-xl"></ion-icon>
-                        <span>Abuja, F.C.T., Nigeria</span>
-                    </div></div>
-                </div>
-            </div>
-            <div>
-                <div className="bg-white rounded-xl shadow-lg p-8 text-gray-600 md:w-80">
-                        <form action="" className="flex flex-col space-y-4">
-                            <div>
-                                <label for="" className="text-sm">Your name</label>
-                            </div>
-                            <div>
-                                <input type="text" placeholder='your name' className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2mt-2 outline-none focus:ring-2 focus:ring-blue-300" />
-                            </div>
-                            <div>
-                                <label for="" className="text-sm">Your email</label>
-                            </div>
-                            <div>
-                                <input type="email" placeholder='your email' className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-blue-300" />
-                            </div>
-                            <div>
-                                <label for="" className="text-sm">Message</label>
-                                <textarea className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-blue-300"></textarea>
-                            </div>
-                            <button className="transition duration-500 transform hover:-translate-y-1 inline-block self-end bg-blue-600 text-lg font-meduim rounded-full text-white px-8 py-3 cursor-pointer">
-                                Sign Up
-                            </button>
-                        </form>
+    <div>
+        <div className='w-full mx-0 bg-[#fafafa] mt-10'>
+            <div className="container w-full mx-auto px-4">
+                <div className="flex mb-20 items-end text-[#4D4D4D] font-serif">
+                    <div className="flex items-center">
+                    <div className="mr-5 py-5">
+                        <div className='flex'>
+                            <h5><a href="/portfolio" style={{textDecoration: 'none', color: '#001973'}} className="px-2">Portfolio</a></h5>
+                            <h5><a href="/blog" style={{textDecoration: 'none', color: '#001973'}} className="px-2">Blog  </a></h5>
+                            <h5 className="px-2"> |</h5>
+                            <h6 className="px-2">
+                                {moment().format('MMM DD, YYYY')}
+                            </h6>
+                        </div>
+                        <h1>FAVOURITE TECH SOLUTIONS: THE DIGITAL INTERDEPENDENCE</h1>
+                        <div className="">
+                            <Link href='/portfolio'>
+                                <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-[#001973] text-sm font-meduim rounded text-white px-1 py-1 cursor-pointer">
+                                    Discover more
+                                </span>
+                            </Link>
+                        </div>
                     </div>
+                    <img src="headicon.png" alt="fts" className="heading2 h-80"/>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+        <div className="container w-full mx-auto px-4">
+            <i>Even though Favourite Tech Solutions has been existing for years before its first appearance on the web. Recently, Favourite Tech Solutions celebrated its 3years anniversary. Our company and our ambitions grew since our beginning. For our 3 years anniversary, we wanted to clarify our vision to all of you. We wanted to make clear what we struggle to do for you everyday, how we do it and what is the rooted purpose behind our company</i>
+            <p>People have always Protected what they hold precious. When things were tangible, trust was visible. <br /> But the world has changed <br /> <br /> Today, we are at the confluence of trends: a global trust crisis and global dataisation. In 15 years, there will be a trillion devices connected online. As more and more of our lives become digital, the threats we face will not be stopped by walls or physical armies. <br /> <br /> Critical digital assets are the new oil and securing them is the important challenge for the coming years. <br /><br /><b>Thats's where we come in. We are the Favourite Tech Solutions</b><br /><br />We are a unique digital company that provides a meduim to build everything you can think of as well as protect it in the digital world. In today's world, we know that trust deserves proof. This is why we provide transparency into how our technology works. <br /><br />We relentlessly stress-test our own technology solutions. Our FTS team is made up of world-class experts with extensive backgrounds in the security and development industries. They continuously look for vulnerabilities on the FTS products as well as our providers' products in an effort to analyze and improve the functionality and security. We know quality means never standing still. <br /><br />What first started as an idea of designing graphics for organizations, businesses digital enthusiats has quickly evolved into the creation of a cutting edge digital technology company serving individuals, institutional investors and enterprises. This goes beyond websites and graphics. From connected pacemakers to software systems to digital optimization, there will be countless enterprises in the future that need to come online and secured. If they're not safe, they can be stolen or compromised, eventually hurting your wallet or even your life just like it happens in reality. <br /><br />And through resilience, we give our clients and customers the ability to recover from setbacks, quickly adapt to technology, change and keep going in the face of adversity. Resilience empowers our clients to explorw and embrace pioneering opportunities like never before.</p>
+        </div>
+        <Brands />
+        <ReviewForm />
     </div>
   )
 }

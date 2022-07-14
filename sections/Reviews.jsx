@@ -8,15 +8,15 @@ import { getReviews } from '../services';
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1024 },
-    items: 5,
+    items: 1,
   },
   desktop: {
     breakpoint: { max: 1024, min: 768 },
-    items: 3,
+    items: 1,
   },
   tablet: {
     breakpoint: { max: 768, min: 640 },
-    items: 2,
+    items: 1,
   },
   mobile: {
     breakpoint: { max: 640, min: 0 },
@@ -52,7 +52,7 @@ const ReviewsTestimonial = () => {
   );
 
   return (
-    <div className="mb-8">
+    <div className="mb-8 container w-full mx-auto">
       <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4">
         {dataLoaded && reviewPosts.map((review, index) => (
           <Reviews key={index} review={review} />

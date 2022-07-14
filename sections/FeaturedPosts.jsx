@@ -58,7 +58,6 @@ const FeaturedPosts = () => {
           <FeaturedPostCard key={index} post={post} />
         ))}
       </Carousel>
-      <hr />
     </div>
   );
 };

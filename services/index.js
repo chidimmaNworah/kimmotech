@@ -126,6 +126,20 @@ export const getCategories = async () => {
     return result.categories
 }
 
+export const getBrands = async () => {
+    const query = gql`
+        query GetBrands {
+            brands {
+                brandPhoto {
+                    url
+                  }
+            }
+        }
+    `
+    const result = await request(graphqlAPI, query)
+    return result.brands
+}
+
 export const getCategoryPost = async (slug) => {
     const query = gql`
       query GetCategoryPost($slug: String!) {
@@ -308,6 +322,18 @@ export const postsSearchQuery = async (id) => {
     return result.postsConnection.edges;
 };
 
+export const submitReviews = async (obj) =>{
+    const result = await fetch('/api/reviews', {
+        method: 'POST',
+        headers:{
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(obj),
+    })
+
+    return result.json()
+}
+
 export const getReviews = async () => {
     const query = gql`
         query GetReviews {
@@ -315,9 +341,7 @@ export const getReviews = async () => {
                 name
                 email
                 testimonial
-                photo {
-                    url
-                  }
+                createdAt
             }
         }
     `
