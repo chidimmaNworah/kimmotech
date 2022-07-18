@@ -14,7 +14,7 @@ const Home = ({posts}) => {
 
 
       <Head>
-        <title>FTS Blog</title>
+        <title>Kimmotech Technologies, Software solutions, Tech Blogs, graphics, web design, seo and more </title>
         <link rel="icon" href="/headicon.png" />
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
