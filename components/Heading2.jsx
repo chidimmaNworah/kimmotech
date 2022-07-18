@@ -4,15 +4,15 @@ import { Heading3 } from '.'
 
 const Heading2 = () => {
   return (
-    <div className='w-full mx-0  gradient-bg mt-20'>
+    <div className='w-full mx-0 gradient-bg mt-20 mb-8'>
     <div className="container w-full mx-auto px-4">
       <div className="flex mb-20 items-end text-white font-serif">
         <div className="flex items-center">
-          <div className="ml-5 py-5 text-center">
-            <h5 className="text-2xl mb-4 font-bold">
+          <div className="py-5 text-center">
+            <h5 className="text-1xl mb-4 font-bold">
               WE CREATE SOLUTIONS
             </h5>
-            <h2 className="text-5xl mb-3 font-bold text-white">
+            <h2 className="text-4xl mb-3 font-black text-white">
 CREATING A DIGITAL INTERFACE FOR YOUR INTERFACE CAN BE OVERWHELMING            </h2>
             <br />
             <br />

@@ -103,9 +103,6 @@ background: linear-gradient(191deg, rgba(0,212,255,1) 0%, rgba(2,0,36,1) 20%, rg
 
 
 @media screen and (max-width: 780px) { 
-    body{
-        width: 100%;
-    }
     .heading1{
         display: none;
     } 
@@ -146,9 +143,5 @@ background: linear-gradient(191deg, rgba(0,212,255,1) 0%, rgba(2,0,36,1) 20%, rg
         right: 25px;
         border-radius: 0.375rem;
     }
-    
-}
-
-@media screen and (max-width: 400px){
     
 }
