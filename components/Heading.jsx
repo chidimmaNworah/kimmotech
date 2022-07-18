@@ -3,16 +3,16 @@ import Link from 'next/link'
 
 const Heading2 = () => {
   return (
-    <div className='w-full mx-0 bg-center bg-no-repeat bg-cover' style={{ backgroundImage: `url('header1.jpg')` }} >
+    <div className='w-full mx-0 bg-center bg-no-repeat bg-cover' style={{ backgroundImage: `url('header1.png')` }} >
     <div className="container w-full mx-auto px-4">
-      <div className="flex mb-8 items-end text-[#4D4D4D] font-serif">
+      <div className="flex mb-8 items-center text-black font-serif">
         <div className="flex items-center">
-          <div className="mr-5 py-5 text-left">
-            <h5 className="text-lg mb-4 font-bold">
+          <div className="py-5 text-center">
+            <h5 className="text-2xl mb-4 font-bold">
               WE SOLVE PROBLEMS
             </h5>
-            <h2 className="text-4xl mb-3 font-bold text-[#001973]">
-              We are a creative digital agency
+            <h2 className="text-5xl mb-3 font-serif font-black text-[#101035]">
+              WE ARE A CREATIVE DIGITAL AGENCY
             </h2>
             <br />
             <br />
@@ -28,7 +28,7 @@ const Heading2 = () => {
             </p>
             <div className="">
               <Link href='/contact'>
-              <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-[#001973] text-lg font-meduim rounded text-white px-2 py-1 cursor-pointer">
+              <span className="transition duration-500 transform hover:-translate-y-1 inline-block outline outline-[#101035] text-lg font-meduim rounded text-[#101035] px-2 py-1 cursor-pointer">
                   Contact Us
               </span>
               </Link>

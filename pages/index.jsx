@@ -22,13 +22,11 @@ const Home = ({posts}) => {
 
       <Heading />
 
-      <h1 className="text-3xl text-center font-semibold font-serif mb-10 mt-8 md:px-2"><a href="/portfolio" style={{textDecoration: 'none', color: '#001973'}}>Our Portfolio</a></h1>
+      <h1 className="text-4xl text-center font-black font-serif mb-10 mt-8 md:px-2"><a href="/portfolio" style={{textDecoration: 'none', color: '#020024'}}>OUR PORTFOLIO</a></h1>
 
       <FeaturedPosts className="lg:mx-20 lg:px-20 mb-8" />
 
       <Heading2 className="container mx-auto px-10 mb-8" />
-
-      <Heading3 />
 
       <Brands />
 

@@ -55,7 +55,7 @@ const ReviewsTestimonial = () => {
     <div className="mb-8 container w-full mx-auto">
       <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4">
         {dataLoaded && reviewPosts.map((review, index) => (
-          <Reviews key={index} review={review} />
+          <Reviews key={index} review={review} className='shadow-lg' />
         ))}
       </Carousel>
     </div>

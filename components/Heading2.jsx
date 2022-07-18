@@ -1,19 +1,19 @@
 import React from 'react'
 import Link from 'next/link'
+import { Heading3 } from '.'
 
 const Heading2 = () => {
   return (
-    <div className='w-full mx-0 bg-[#fafafa] mt-20'>
+    <div className='w-full mx-0  gradient-bg mt-20'>
     <div className="container w-full mx-auto px-4">
-      <div className="flex mb-20 items-end text-[#4D4D4D] font-serif">
+      <div className="flex mb-20 items-end text-white font-serif">
         <div className="flex items-center">
-          <div className="mr-5 py-5">
-            <h5 className="text-lg mb-4 font-bold">
+          <div className="ml-5 py-5 text-center">
+            <h5 className="text-2xl mb-4 font-bold">
               WE CREATE SOLUTIONS
             </h5>
-            <h2 className="text-4xl mb-3 font-bold text-[#001973]">
-              Creating a digital interface for your business can be overwhelming
-            </h2>
+            <h2 className="text-5xl mb-3 font-bold text-white">
+CREATING A DIGITAL INTERFACE FOR YOUR INTERFACE CAN BE OVERWHELMING            </h2>
             <br />
             <br />
             <p className="text-xl mb-4">
@@ -28,18 +28,18 @@ const Heading2 = () => {
             </p>
             <div className="">
               <Link href='/portfolio'>
-              <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-[#001973] text-lg font-meduim rounded text-white px-2 py-1 cursor-pointer">
+              <span className="transition duration-500 transform hover:-translate-y-1 inline-block outline outline-white text-lg font-meduim rounded text-white px-2 py-1 cursor-pointer">
                   Discover more
               </span>
               </Link>
         </div>
           </div>
-        
-          <img src="laptop.jpg" alt="fts" className="heading2"/>
-
         </div>
       </div>
+      <hr className='text-blue-200 mb-10'/>
     </div>
+    
+    <Heading3 />
     </div>
   )
 }

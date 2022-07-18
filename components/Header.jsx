@@ -23,14 +23,14 @@ const Header = () => {
     return (
         <Navbar bg="light" expand="lg" sticky="top" className="shadow-sm">
       <Container>
-        <Navbar.Brand href="/" className="font-serif pr-10 textcolor1"><img src="/logo.png" alt="logo" width="100rem" /></Navbar.Brand>
+        <Navbar.Brand href="/" className="font-serif pr-10 textcolor1"><img src="/logo.png" alt="logo" width="250rem" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/" className={asPath === '/' ? "pb-1 border-bottom border-primary" : "pb-1"}>Home</Nav.Link>
+            <Nav.Link href="/" className={asPath === '/' ? "pb-1 border-bottom border-muted" : "pb-1"}>Home</Nav.Link>
             {/* <Nav.Link href="/portfolio" className={asPath === '/portfolio' ? "pb-1 border-bottom border-primary" : "pb-1"}>Portfolio</Nav.Link> */}
             <Nav.Link href="https://fts-blog.vercel.app/" target="_blank" className={asPath === 'https://fts-blog.vercel.app/' ? "pb-1 border-bottom border-primary" : "pb-1"}>Blog</Nav.Link>
-            <NavDropdown title="Portfolio" id="basic-nav-dropdown">
+            <NavDropdown title="Portfolio" id="basic-nav-dropdown" className='text-dark'>
             {categories.map((category) => (
               <NavDropdown.Item key={category.slug} href={`/category/${category.slug}`}>{category.name}</NavDropdown.Item>
               ))}
@@ -39,7 +39,7 @@ const Header = () => {
                 All Projects
               </NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Tags" id="basic-nav-dropdown">
+            <NavDropdown title="Tags" id="basic-nav-dropdown" className='text-dark'>
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -50,7 +50,7 @@ const Header = () => {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/about" className={asPath === '/about' ? "pb-1 border-bottom border-primary" : "pb-1"}>About Us</Nav.Link>
+            <Nav.Link href="/about" className={asPath === '/about' ? "pb-1 border-bottom border-muted" : "pb-1"}>About Us</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

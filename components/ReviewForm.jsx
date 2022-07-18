@@ -44,7 +44,7 @@ const ReviewForm = () => {
 
   return (
     <div className="flex items-center justify-center">
-              <span onClick={() => setButtonPopup(true)} className="transition duration-500 transform hover:-translate-y-1 inline-block outline outline-offset-2 outline-[#001973] text-lg font-meduim rounded text-[#001973] px-4 py-3 cursor-pointer">
+              <span onClick={() => setButtonPopup(true)} className="transition duration-500 transform hover:-translate-y-1 inline-block outline outline-offset-2 outline-[#020024] text-lg font-meduim rounded text-[#020024] px-4 py-3 cursor-pointer">
                   Write a review
               </span>
               <ReviewPopup trigger={buttonPopup} setTrigger={setButtonPopup}>
