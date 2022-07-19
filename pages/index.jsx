@@ -21,7 +21,7 @@ const Home = ({posts}) => {
 
       <Heading />
 
-      <h1 className="text-3xl text-center font-black font-serif mb-10 mt-8 md:px-2"><a href="/portfolio" style={{textDecoration: 'none', color: '#020024'}}>OUR PORTFOLIO</a></h1>
+      <h1 className="text-3xl text-center font-black font-serif mb-10 pt-8 md:px-2 py-10"><a href="/portfolio" style={{textDecoration: 'none', color: '#020024'}}>PORTFOLIO</a></h1>
 
       <FeaturedPosts className="mb-8" />
 
@@ -29,7 +29,7 @@ const Home = ({posts}) => {
 
       <Brands />
 
-      <Reviews />
+      {/* <Reviews /> */}
 
       <ReviewForm />
     </div>

@@ -27,7 +27,7 @@ const Header = () => {
     }, [])
 
     return (
-        <Navbar bg="light" expand="lg" sticky="top" className="shadow-sm">
+        <Navbar bg="light" expand="lg" sticky="top" className="shadow-xl">
       <Container>
         <Navbar.Brand href="/" className="font-serif pr-10 textcolor1"><img src="/logo.png" alt="logo" width="250rem" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -1,17 +1,33 @@
 import React from 'react'
 import Link from 'next/link'
 
+
 const Heading2 = () => {
   return (
-    <div className='w-full mx-0 bg-center bg-no-repeat bg-cover' style={{ backgroundImage: `url('header1.png')` }} >
-    <div className="container w-full mx-auto px-4">
-      <div className="flex mb-8 items-center text-black font-serif">
+    <div className='w-full mx-0'>
+      <div className="white">
+        <div className="squares">
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+        </div>
+        <div className="grey"></div>
+      </div>
+      <div className="container w-full mx-auto">
+      <div className="flex justify-center right-0 left-0 items-center text-black font-serif absolute top-20">
         <div className="flex items-center">
           <div className="py-5 text-center">
             <h5 className="text-2xl mb-4 font-bold">
               WE SOLVE PROBLEMS
             </h5>
-            <h2 className="text-5xl mb-3 font-serif font-black text-[#101035]">
+            <h2 className="lg:text-5xl text-4xl mb-3 font-serif font-black text-[#101035]">
               WE ARE A CREATIVE DIGITAL AGENCY
             </h2>
             <br />
