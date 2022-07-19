@@ -20,7 +20,7 @@ const about = () => {
                                 {moment().format('MMM DD, YYYY')}
                             </h6>
                         </div>
-                        <h1>FAVOURITE TECH SOLUTIONS: THE DIGITAL INTERDEPENDENCE</h1>
+                        <h1>KIMMOTECH: THE DIGITAL INTERDEPENDENCE</h1>
                         <div className="">
                             <Link href='/portfolio'>
                                 <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-[#001973] text-sm font-meduim rounded text-white px-1 py-1 cursor-pointer">
@@ -29,7 +29,7 @@ const about = () => {
                             </Link>
                         </div>
                     </div>
-                    <img src="headicon.png" alt="fts" className="heading2 h-80"/>
+                    <img src="mockup.png" alt="Kimmotech" className="heading2 h-72"/>
                     </div>
                 </div>
             </div>

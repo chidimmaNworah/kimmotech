@@ -126,13 +126,64 @@ export const getCategories = async () => {
     return result.categories
 }
 
+export const getTags = async () => {
+    const query = gql`
+        query GetTags {
+            tags {
+                name
+                slug
+            }
+        }
+    `
+    const result = await request(graphqlAPI, query);
+    return result.tags
+}
+export const getTagPost = async (slug) => {
+    const query = gql`
+      query GetTagPost($slug: String!) {
+        postsConnection(where: {tags_some: {slug: $slug}}) {
+          edges {
+            cursor
+            node {
+              author {
+                bio
+                name
+                id
+                photo {
+                  url
+                }
+              }
+              createdAt
+              slug
+              title
+              excerpt
+              featuredImage {
+                url
+              }
+              tags {
+                name
+                slug
+              }
+            }
+          }
+        }
+      }
+    `;
+  
+    const result = await request(graphqlAPI, query, { slug });
+  
+    return result.postsConnection.edges;
+};
+
 export const getBrands = async () => {
     const query = gql`
         query GetBrands {
             brands {
+                name
                 brandPhoto {
                     url
                   }
+                slug
             }
         }
     `
@@ -347,4 +398,16 @@ export const getReviews = async () => {
     `
     const result = await request(graphqlAPI, query);
     return result.reviews
+}
+
+export const submitMessage = async (obj) =>{
+    const result = await fetch('/api/message', {
+        method: 'POST',
+        headers:{
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(obj),
+    })
+
+    return result.json()
 }

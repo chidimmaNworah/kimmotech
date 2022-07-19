@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
-import { getPosts, getAuthorPosts, getCategories } from '../services';
+import { getPosts, getTags, getCategories } from '../services';
 import { useRouter } from 'next/router';
 import 'react-ionicons'
 import Button from 'react-bootstrap/Button';
@@ -9,9 +9,15 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { filter } from 'domutils';
 
 
 const Header = () => {
+    const [searchTerm, setSearchTerm] = useState("")
+    const values = Object.entries(getTags)
+    const filtered = values.filter(val => 
+      val.name.toLowerCase().includes(searchTerm.toLowerCase()))
+
     const {asPath} = useRouter()
 
     const [categories, setCategories] = useState([]);
@@ -51,6 +57,8 @@ const Header = () => {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/about" className={asPath === '/about' ? "pb-1 border-bottom border-muted" : "pb-1"}>About Us</Nav.Link>
+            <Nav.Link href="/contact" className={asPath === '/contact' ? "pb-1 border-bottom border-muted" : "pb-1"}>Contact Us</Nav.Link>
+
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -58,12 +66,18 @@ const Header = () => {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              onChange={(event) => {
+                setSearchTerm(event.target.value)
+                console.log(event.target.value)
+              }} 
             />
             <Button variant="outline-primary">Search</Button>
           </Form>
+          <p>{filtered}</p>
         </Navbar.Collapse>
       </Container>
-    </Navbar>    
+    </Navbar>   
+    
     )
 }
 
