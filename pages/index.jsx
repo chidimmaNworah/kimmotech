@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Home = ({posts}) => {
 
   return (
-    <div>
+    <div className=''>
     <div className=''>
 
 

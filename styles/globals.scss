@@ -58,13 +58,14 @@ body {
 
 .white { 
   height: 55vh;
+  margin-bottom: 5.5rem;
   &:before { 
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 90vh;
+    height: 55vh;
     background-image: linear-gradient(-180deg, #FFFFFF 0%, rgba(255,255,255,0.00) 100%) }
   &:after {
     content: '';
@@ -85,7 +86,7 @@ body {
   width: 1em;
   height: 1em;
   transform: translateY(100%);
-  background: #0293d0;  
+  background: #ef4036;  
   &:nth-child(2) { 
     height: 1.5em;  
     width: 3em;   
@@ -172,5 +173,15 @@ a {
 @media screen and (max-width: 780px) { 
   .white { 
     height: 75vh;
+    margin-bottom: 7rem;
+  }
+
+  .heading_three_text_1{
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+  }
+  .heading_three_text{
+    font-size: 1.5rem; /* 36px */
+    line-height: 1.5rem;
   }
 }

@@ -6,14 +6,13 @@ const Heading2 = () => {
   return (
     <div className='w-full mx-0 gradient-bg mt-20 mb-8'>
     <div className="container w-full mx-auto px-4">
-      <div className="flex mb-20 items-end text-white font-serif">
+      <div className="flex items-end text-[#101035] font-serif">
         <div className="flex items-center">
-          <div className="py-5 text-center">
-            <h5 className="text-1xl mb-4 font-bold">
+          <div className="pt-16 text-center">
+            <h5 className="heading_three_text_1 text-1xl mb-4 font-bold">
               WE CREATE SOLUTIONS
             </h5>
-            <h2 className="text-4xl mb-3 font-black text-white">
-CREATING A DIGITAL INTERFACE FOR YOUR INTERFACE CAN BE OVERWHELMING            </h2>
+            <h2 className="heading_three_text text-4xl mb-3 font-black">CREATING A DIGITAL INTERFACE FOR YOUR BUSINESS CAN BE OVERWHELMING</h2>
             <br />
             <br />
             <p className="text-xl mb-4">
@@ -36,7 +35,7 @@ CREATING A DIGITAL INTERFACE FOR YOUR INTERFACE CAN BE OVERWHELMING            <
           </div>
         </div>
       </div>
-      <hr className='text-blue-200 mb-10'/>
+      <hr className='text-[#101035] mb-10'/>
     </div>
     
     <Heading3 />

@@ -44,7 +44,7 @@ const Heading2 = () => {
             </p>
             <div className="">
               <Link href='/contact'>
-              <span className="transition duration-500 transform hover:-translate-y-1 inline-block outline outline-[#101035] text-lg font-meduim rounded text-[#101035] px-2 py-1 cursor-pointer">
+              <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-[#101035] text-lg font-meduim rounded text-white px-2 py-1 cursor-pointer">
                   Contact Us
               </span>
               </Link>
