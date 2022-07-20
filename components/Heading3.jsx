@@ -4,6 +4,7 @@ import 'react-ionicons'
 
 const Heading2 = () => {
   return (
+    <div className='w-full mx-0 gradient-bg mt-20 mb-8'>
     <div className="container w-full mx-auto rounded-lg lg:px-8 sm:px-1 font-serif">
         <div className="p-10 text-[#101035] text-center">
             <h3 className='mb-8 lg:text-xl text-md font-bold'>OUR</h3>
@@ -69,6 +70,7 @@ const Heading2 = () => {
                 <p className="text-[#101035] text-md mb-2">We deliver maximum team support for your businesses, starting from proposals, through graphics, online integration, consultation, </p>
             </div>
         </div>
+    </div>
     </div>
   )
 }

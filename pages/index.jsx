@@ -29,7 +29,10 @@ const Home = ({posts}) => {
 
       <Brands />
 
-      {/* <Reviews /> */}
+
+    <Heading3 />
+
+      <Reviews />
 
       <ReviewForm />
     </div>

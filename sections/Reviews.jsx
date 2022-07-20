@@ -52,7 +52,7 @@ const ReviewsTestimonial = () => {
   );
 
   return (
-    <div className="mb-8 container w-full mx-auto">
+    <div className="mb-8 container w-full mx-auto bg-[white] shadow-lg py-10">
       <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4">
         {dataLoaded && reviewPosts.map((review, index) => (
           <Reviews key={index} review={review} className='shadow-lg' />

@@ -5,6 +5,7 @@ import moment from 'moment'
 const Reviews = ({review}) => {
 
   return (
+    
     <div className="relative h-80">
     <div className="absolute bg-[#020024] shadow-md inline-block w-full h-80" />
       <div className="flex flex-col rounded-lg p-4 items-center justify-center absolute w-full h-full">
