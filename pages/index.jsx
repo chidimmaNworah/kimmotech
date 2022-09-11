@@ -1,41 +1,53 @@
 import React, {useState, useEffect} from 'react'
 import Head from 'next/head'
-import {Heading3, Heading2, Heading, Brands, ReviewForm} from '../components'
+import {Heading3, Heading2, Heading, Brands, Contact, ReviewForm, Footer, Header} from '../components'
 import {getPosts} from '../services'
 import {FeaturedPosts, Reviews} from '../sections'
+import "swiper/css/bundle";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Link from 'next/link'
 
 const Home = ({posts}) => {
 
   return (
     <div className=''>
     <div className=''>
-
-
+    <Header />
       <Head>
         <title>Kimmotech Technologies, Software solutions, Tech Blogs, graphics, web design, seo and more </title>
         <link rel="icon" href="/headicon.png" />
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       </Head>
+      
+      <div>
+        <video id='headerVideo' loop={true} autoPlay="autoPlay" muted>
+          <source src="/vidfy-african-cheerful-young-stylish-man-and-w_1920x1080.mp4" type="video/mp4"></source>
+        Your browser does not support the video tag.
+        </video>
+        <div className="headText">
+        <div className="caption">
+          <h1>Grow your business and ideas with KimmoTech</h1>
+          <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore amet assumenda, laudantium culpa facere consequatur accusamus, aliquid modi nihil itaque placeat dolorum quia in? Modi debitis consectetur iusto quam perspiciatis.
+          </p>
+          <div >
+            <Link href='#contact' className='headTextBtn'>Contact Us</Link>
+            <a href='/portfolio'className='headTextBtn'>Projects</a>
+          </div>
+        </div>
+        </div>
+      </div>
 
       <Heading />
-
-      <h1 className="text-3xl text-center font-black font-serif mb-10 pt-8 md:px-2 py-10"><a href="/portfolio" style={{textDecoration: 'none', color: '#020024'}}>PORTFOLIO</a></h1>
-
-      <FeaturedPosts className="mb-8" />
-
-      <Heading2 />
-
-      <Brands />
-
-
-    <Heading3 />
-
       <Reviews />
+      <Heading2 />
+      <FeaturedPosts />
+      <Brands />
+      <Heading3 />
+      <Contact />
 
-      <ReviewForm />
     </div>
+
+    <Footer />
     </div>
   )
 }

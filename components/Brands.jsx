@@ -11,23 +11,23 @@ const Brands = () => {const [brands, setBrands] = useState([]);
     }, [])
 
   return (
-    <div className='container w-full mx-auto bg-[#020024] shadow-lg py-10 mb-20'>
-    <div className=" text-center text-white rounded-t-lg py-10 mb-20">
-            <h6 className="pb-1">We collaborate with brands and agencies to create memorable experiences.</h6>
-            <h4 className="font-bold pb-3">Brands we have worked with along the way</h4>
-            <div className="grid grid-cols-3 lg:grid-cols-6 gap-4 px-10 mb-1">
-            
-            {brands.map((brand) => (
-              <a key={brand.name} href={brand.slug} target="_blank">
-                <img
-                src={brand.brandPhoto.url} 
-                alt={brand.name}
-                className="object-fill h-full w-full border border-gray-200" />
-                </a>
-            ))}
-            </div>
+    <div className='w-full py-10 mb-20 bg-white'>
+      <div className="text-center mx-10 text-black">
+        <div>
+          <h4 className="font-normal py-5 tracking-wide lg:text-5xl md:text-3xl">PARTNERS & CLIENTS</h4>
         </div>
+              <div className="brands">
+                {brands.map((brand) => (
+                  <a key={brand.name} href={brand.slug} target="_blank">
+                    <img
+                    src={brand.brandPhoto.url} 
+                    alt={brand.name}
+                    className="object-fill h-full w-52" />
+                    </a>
+                ))}
+                </div>
       </div>
+    </div>
   )
 }
 

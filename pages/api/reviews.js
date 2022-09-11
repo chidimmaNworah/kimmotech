@@ -6,7 +6,7 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
 const graphcmsToken = process.env.GRAPHCMS_TOKEN
 
 export default async function reviews(req, res){
-  const {name, email, testimonial} = req.body
+  const {name, email, testimonial, profession, instagram, twitter, facebook} = req.body
 
   const graphQLClient = new GraphQLClient(graphqlAPI, {
     headers: {
@@ -15,8 +15,8 @@ export default async function reviews(req, res){
   })
 
   const query = gql`
-    mutation CreateReview($name: String!, $email: String!, $testimonial: String!){
-      createReview(data: {name: $name, email: $email, testimonial: $testimonial}){id}
+    mutation CreateReview($name: String!, $email: String!, $testimonial: String!, $profession: String!, $instagram: String!, $twitter: String!, $facebook: String!){
+      createReview(data: {name: $name, email: $email, testimonial: $testimonial, profession: $profession, instagram: $instagram, twitter: $twitter, facebook: $facebook}){id}
     }
   `
 

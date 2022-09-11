@@ -59,13 +59,13 @@ const PostDetail = ({post}) => {
 
   return (
     <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
-      <div className="relative overflow-hidden shadow-md mb-6">
+      {/* <div className="relative overflow-hidden shadow-md mb-6">
         <img 
           src={post.featuredImage.url}
           alt={post.title}
           className="object-top h-full w-full rounded-t-lg" 
         />
-      </div>
+      </div> */}
       
       <div className="px-4 lg:px-0">
         <div className="flex items-center mb-8 w-full">
@@ -96,20 +96,14 @@ const PostDetail = ({post}) => {
         return getContentFragment(index, children, typeObj, typeObj.type)
       })}
       
-      <div className="flex items-center">
-
-      <div>
-      
+        <div className="flex items-center">
+          <div>
             <p className="text-gray-700 text-lg">Categories: <ul className='text-sm inline'> {categories.map((category) => (<Link key={category.slug} href={`/category/${category.slug}`}><li className='inline mr-2 p-2 cursor-pointer'>{category.name}</li></Link>))}</ul></p>
-      
-            </div>
-
-            <div className='ml-8'>
-            
+          </div>
+          <div className='ml-8'>
             <p className="text-gray-700 text-lg">Tags: <ul className='text-sm inline'> {tags.map((tag) => (<Link key={tag.slug} href={`/tag/${tag.slug}`}><li className='inline mr-2 p-2 cursor-pointer'>{tag.name}</li></Link>))}</ul></p>
-            
-            </div>
-      </div>
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
+import moment from 'moment';
+import Link from 'next/link';
 import { FeaturedPostCard } from '../components';
 import { getFeaturedPosts } from '../services';
+import {MdOutlineArrowForward} from 'react-icons/md'
 
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1024 },
-    items: 5,
+    items: 4,
   },
   desktop: {
     breakpoint: { max: 1024, min: 768 },
@@ -52,13 +54,25 @@ const FeaturedPosts = () => {
   );
 
   return (
-    
-    <div className="mb-8 container w-full mx-auto">
-      <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4">
+    <div className='bg-white w-full my-10'>
+      <h2 className='text-black text-center font-normal py-5 tracking-wide lg:text-5xl md:text-3xl'>OUR PORTFOLIO & CASE STUDIES</h2>
+    <div className="w-full py-10">
+      
+      <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-2">
         {dataLoaded && featuredPosts.map((post, index) => (
           <FeaturedPostCard key={index} post={post} />
         ))}
       </Carousel>
+      
+    </div>
+    <div className="text-center mb-8">
+        <Link href='/portfolio'>
+        <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-[#002438] text-lg font-meduim rounded text-white px-4 py-2 cursor-pointer">
+            Visit our portfolio
+        </span>
+        </Link>
+    </div>
+    <hr className='container mx-auto text-[#101035] mt-20'/>
     </div>
   );
 };

@@ -36,7 +36,7 @@ const contact = () => {
     }
 
   return (
-      <div className='container w-full mx-auto'>
+      <div className='container w-full mx-auto z-10'>
     <div className="flex w-full pt-20 justify-center items-center">
         <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 bg-[#020024] w-full max-x-4xl p-8 sm:p-12 rounded-xl shadow-lg text-white">
             <div className="flex flex-col space-y-6 justify-between">

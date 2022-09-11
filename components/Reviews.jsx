@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { getReviews } from '../services' 
+import { getReviews } from '../services'  
 import moment from 'moment'
 
 const Reviews = ({review}) => {

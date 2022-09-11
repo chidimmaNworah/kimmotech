@@ -9,7 +9,7 @@ const Pagination = ({postsPerPage, totalPosts, paginate}) => {
 
   return (
       <div>
-    <nav className="flex page navigation justify-center">
+    <div className="flex page navigation justify-center">
         <ul className="flex list-style-none">
             {pageNumbers.map(number => 
                 <li key={number} className="page-item p-5 text-black font-bold">
@@ -19,7 +19,7 @@ const Pagination = ({postsPerPage, totalPosts, paginate}) => {
                 </li>
             )}
         </ul>
-    </nav>
+    </div>
     </div>
   )
 }
