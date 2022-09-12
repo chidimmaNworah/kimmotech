@@ -16,28 +16,24 @@ const Home = ({posts}) => {
       <Head>
         <title>Kimmotech Technologies, Software solutions, Tech Blogs, graphics, web design, seo and more </title>
         <link rel="icon" href="/headicon.png" />
-         {/* Google tag (gtag.js)  */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBV38TCNGS"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
-
-          gtag('config', 'G-VBV38TCNGS');
-        </script>
+        
       </Head>
       
       <div>
         <video id='headerVideo' loop={true} autoPlay="autoPlay" muted>
           <source src="/vidfy-african-cheerful-young-stylish-man-and-w_1920x1080.mp4" type="video/mp4"></source>
-        Your browser does not support the video tag.
         </video>
         <div className="headText">
         <div className="caption">
-          <h1>Grow your business and ideas with KimmoTech</h1>
+          <h1>
+          <span className='text-[#FF6300]'>TRUSTED </span>
+          SOFTWARE ENGINEERING <br />
+          AND IT CONSULTING <br />
+          <span className='text-[#FF6300]'> COMPANY</span>
+          </h1>
           <div >
             <Link href='#contact' className='headTextBtn'>Contact Us</Link>
-            <a href='/portfolio'className='headTextBtn'>Projects</a>
+            <Link href='/portfolio'className='headTextBtn'>Projects</Link>
           </div>
         </div>
         </div>
