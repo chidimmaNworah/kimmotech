@@ -9,9 +9,9 @@ const Heading2 = () => {
         <div key={detail.heading} className="card">  
           <div className='done'>
             <div className='pl-2'>
-              <h5 className='font-normal text-[#E54416] pb-4 text-lg'>{detail.heading}</h5>
+              <h5 className='font-normal text-[#E54416] mb-1 text-lg'>{detail.heading}</h5>
               <ul>{detail.list.map(listItems=>(
-                <li key={detail.heading + listItems}>{listItems}</li>
+                <li key={detail.heading + listItems} className='text-sm'>{listItems}</li>
               ))}
               </ul>
             </div>

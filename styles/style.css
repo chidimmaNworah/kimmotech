@@ -37,33 +37,16 @@ ul{
     transform: translate(-50%, -50%);
     text-align: center;
     max-width: 100%;
-    /* font-size: 4.5rem;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    line-height: 4.5rem;
-    letter-spacing: -1px;
-    font-family: sans-serif; */
-
 }
 
 .headText .caption h1{
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 1px;
     margin-bottom: 1rem;
     margin-top: 3rem;
     line-height: 2.5rem;
-    font-weight: 500;
-}
-
-.headText .caption p{
-    margin: 25px 0;
-    letter-spacing: 1px;
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    color: #fff;
+    font-weight: 600;
 }
 
 .headText .caption a{
@@ -107,14 +90,14 @@ main {
     background: #002438;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 main .card{
-    width: 100%;
-    height: 25rem;
+    width: 20rem;
+    height: 18.5rem;
     background: #002438;
-    box-shadow: 0px 0px 5px 2px #000;
+    box-shadow: 0px 0px 0.5px 0.3px #000813;
     cursor: pointer;
     overflow: hidden;
     margin-bottom: 2rem;
@@ -129,14 +112,16 @@ main .card::before{
     width: 160%;
     height: 130%;
     background: #D72A06;
-    background-image: conic-gradient(#fff 0deg, #fff 90deg,
-    transparent 130deg, transparent 180deg, #fff 180deg,
-    #fff 270deg, transparent 310deg, transparent 360deg);
+    background-image: conic-gradient(#002438 0deg, #002438 90deg,
+    transparent 130deg, transparent 180deg, #002438 180deg,
+    #002438 270deg, transparent 310deg, transparent 360deg);
     transition: transform 2s;
+    visibility: hidden;
 }
 
 main .card:hover::before{
     transform: translate(-50%, -50%) rotate(-100deg);
+    visibility: visible;
 }
 
 main .done{
@@ -147,8 +132,8 @@ main .done{
     font-size: 17px;
     align-items: center;
     justify-content: center;
-    height: 24.5rem;
-    width: 25.5rem;
+    height: 18rem;
+    width: 100%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -358,10 +343,10 @@ div .reviewCard .image img{
 .reviewCard{
     position: relative;
     background: #fff;
-    /* border-radius: 20px; */
+    overflow: auto;
     margin: 20px 0;
     width: 100%;
-    height: 50%;
+    height: 28rem;
 }
 .reviewCard:before{
     content: "";
@@ -641,5 +626,32 @@ div .reviewCard .image img{
 @media screen and (max-width: 400px) {
     html{
         font-size: 13px;
+    }
+    .headText .caption h1{
+        color: #fff;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        margin-top: 3rem;
+        line-height: 2rem;
+        font-weight: 600;
+    }
+    
+    .headText .caption a{
+        font-size: 12px;
+        border-radius: 5px;
+        font-weight: 600;
+        padding: 0.5rem;
+        text-transform: uppercase;
+        border: 1px solid #fff;
+        letter-spacing: 1px;
+        margin-right: 15px;
+        box-shadow: 0 0 25px rgba(24,24,24, 0.9);
+        transition: all 0.3s;
+        display: inline-grid;
+    }
+    .reviewCard{
+        width: 100%;
+        height: 100%;
     }
 }
