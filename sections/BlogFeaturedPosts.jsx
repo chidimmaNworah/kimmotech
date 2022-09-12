@@ -52,7 +52,7 @@ const FeaturedPosts = () => {
   );
 
   return (
-    <div className="mb-8">
+    <div>
       <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="">
         {dataLoaded && featuredPosts.map((post, index) => (
           <BlogFeatured key={index} post={post} />

@@ -16,6 +16,15 @@ const Home = ({posts}) => {
       <Head>
         <title>Kimmotech Technologies, Software solutions, Tech Blogs, graphics, web design, seo and more </title>
         <link rel="icon" href="/headicon.png" />
+         {/* Google tag (gtag.js)  */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBV38TCNGS"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date());
+
+          gtag('config', 'G-VBV38TCNGS');
+        </script>
       </Head>
       
       <div>
@@ -26,9 +35,6 @@ const Home = ({posts}) => {
         <div className="headText">
         <div className="caption">
           <h1>Grow your business and ideas with KimmoTech</h1>
-          <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore amet assumenda, laudantium culpa facere consequatur accusamus, aliquid modi nihil itaque placeat dolorum quia in? Modi debitis consectetur iusto quam perspiciatis.
-          </p>
           <div >
             <Link href='#contact' className='headTextBtn'>Contact Us</Link>
             <a href='/portfolio'className='headTextBtn'>Projects</a>
