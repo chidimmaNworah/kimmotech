@@ -48,7 +48,7 @@ const Contact = () => {
     <div className="container w-full">
         <div className="flex flex-col space-y-6 md:flex-row lg:space-y-4 w-full max-x-4xl p-8 shadow-lg text-black">
             <div className="flex flex-col space-y-6 justify-between">
-                <div>
+                <div className='mr-8'>
                     <h1 className="font-bold text-4xl tracking-wide text-[#E53B0F]">Contact Us</h1>
                     <p className="pt-2 text-black text-sm">
                         Share the details of your project - like scope, timeframes, or business challenges you'd like to solve. Our team will carefully study them and then we'll figure out the next move together.
@@ -70,8 +70,7 @@ const Contact = () => {
                 </div>
             </div>
             <div>
-                <div className="bg-white shadow-lg p-8 text-gray-600 w-full">
-                    <div className=''>
+                <div className="bg-white text-gray-600 w-full">
                         <form action="" className="flex flex-col space-y-4 w-full">
                             <div>
                             <div>
@@ -111,7 +110,6 @@ const Contact = () => {
                             {showSuccessMessage && <span className="text-xl float-right font-semibold mt-3 text-green-500">message sent</span>}
 
                         </form>
-                        </div>
                     </div>
             </div>
         </div>

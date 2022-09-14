@@ -49,19 +49,15 @@ const Header = () => {
         <div className={`menu ${menuOpen ? `menu-open` : `menu-closed`}`}>
           <div>
             <a href="#" className='brand'>Menu</a>
-            <ul>
-              <li><a href="#">Tutorials</a></li>
-              <li><a href="#">Earnings</a></li>
-              <li><a href="#">What's New</a></li>
-              <li><a href="#">Categories</a></li>
+            <ul className='brandList'>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/portfolio">Projects</Link></li>
+              <li><Link href="/blog" target='_blank'>Blog</Link></li>
+              <li><Link href="#">Business</Link></li>
+              <li><Link href="/#contact">Contact Us</Link></li>
+              <li><Link href="/about">About Us</Link></li>
             </ul>
 
-            <ul>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Store</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
             {/* social media links */}
             <ul className='social-media'>
               <li><a href="https://www.facebook.com/Kimmotech-100529069435679/">
@@ -95,12 +91,12 @@ const Header = () => {
           <div className="container-inner">
 
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/portfolio">Projects</a></li>
-              <li><a href="/blog" target='_blank'>Blog</a></li>
-              <li><a href="#">Business</a></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/portfolio">Projects</Link></li>
+              <li><Link href="/blog" target='_blank'>Blog</Link></li>
+              <li><Link href="#">Business</Link></li>
               <li><Link href="/#contact">Contact Us</Link></li>
-              <li><a href="#about">About Us</a></li>
+              <li><Link href="/about">About Us</Link></li>
             </ul>
 
             <form action="">

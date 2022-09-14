@@ -6,35 +6,29 @@ import '../styles/globals.scss'
 import '../styles/style.css'
 import type { AppProps } from 'next/app'
 import {SSRProvider} from '@react-aria/ssr'
-import Script from 'next/script'
-import * as ga from '../components/google-analytics'
+import TagManager from 'react-gtm-module'
+import { type } from 'os'
+import { stringifyForDisplay } from '@apollo/client/utilities'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter()
 
-  useEffect(()=>{
-    const handleRouteChange = (url) =>{
-      ga.pageview(url)
-    }
+React.useEffect(() => {
+  // const tagManagerArgs = {
+  //   gtmid: 'GTM-PRDB4F4'
+  // }
+  
+  // TagManager.initialize(tagManagerArgs)
+  if(typeof window !== 'undefined'){
+    console.log('init gtm')
+    TagManager.initialize({gtmId: 'GTM-PRDB4F4'})
+  }else {
+    console.log('GTM server side -ignoring')
+  }
+}, [])
 
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
   return (
     <SSRProvider>
     <Layout>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`} strategy='afterInteractive' />
-      <Script id='google-analytics-script' strategy='afterInteractive'>
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
-       
-          gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
-        `}
-      </Script>
       <Component {...pageProps} />
     </Layout>
     </SSRProvider>

@@ -56,14 +56,14 @@ const Home = ({posts}) => {
 
           <div className='xl:w-6/12 lg:w-8/12 w-full lg:mx-6 h-full'>
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mt-4 container mx-auto">
-          {currentPosts.map((post, index) => (
-              <BlogPostCard key={index} post={post.node} />
-            ))}
+            {currentPosts.map((post, index) => (
+                <BlogPostCard key={index} post={post.node} />
+              ))}
+            </div>
+            <Pagination postsPerPage={postsPerPage} totalPosts={blogposts.length} paginate={paginate} />
           </div>
-          <Pagination postsPerPage={postsPerPage} totalPosts={blogposts.length} paginate={paginate} />
-        </div>
 
-          <div className='xl:w-3/12 lg:w-4/12 w-full mt-8 lg:mt-0'>
+          <div className='w-full mt-8 lg:mt-0'>
             <div className="bg-white shadow-sm rounded-sm p-4">
               <h1 className="text-xl font-semibold text-gray-700">Social Plugin</h1>
               <div className="flex gap-2">

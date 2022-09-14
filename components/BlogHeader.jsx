@@ -56,29 +56,38 @@ const BlogHeader = () => {
       <nav id='navbar' className={navbarBackground ? 'navbar-active' : 'navbar'}>
         <div className={`menu ${menuOpen ? `menu-open` : `menu-closed`}`}>
           <div>
+            <a href="#" className='brand'>MENU</a>
+
+            <ul className='brandList'>
+              <li><Link href="/blog">Home</Link></li>
+              <li><Link href="#">Business</Link></li>
+              <li><Link href="/#contact">Contact Us</Link></li>
+              <li><Link href="#about">About Us</Link></li>
+            </ul>
+
             <a href="#" className='brand mb-8'>Categories</a>
             {blogCategories.map((category) => (
-            <a href={`/blogcategory/${category.slug}`}>
+            <Link href={`/blogcategory/${category.slug}`}>
               <span className="cursor-pointer text-center mb-3">
                 {category.name}
               </span>
-            </a>
+            </Link>
             ))}
 
             {/* social media links */}
             <ul className='social-media'>
-              <li><a href="https://www.facebook.com/Kimmotech-100529069435679/">
+              <li><Link href="https://www.facebook.com/Kimmotech-100529069435679/">
               <FaFacebookSquare />
-              </a></li>
-              <li><a href="https://www.instagram.com/kimmotech/">
+              </Link></li>
+              <li><Link href="https://www.instagram.com/kimmotech/">
               <FaInstagramSquare />
-              </a></li>
-              <li><a href="https://github.com/chidimmaNworah/kimmotech">
+              </Link></li>
+              <li><Link href="https://github.com/chidimmaNworah/kimmotech">
               <FaGithubSquare />
-              </a></li>
-              <li><a href="https://www.youtube.com/channel/UCAS5-1vY1utqRudf_qtZksQ">
+              </Link></li>
+              <li><Link href="https://www.youtube.com/channel/UCAS5-1vY1utqRudf_qtZksQ">
               <FaYoutubeSquare />
-              </a></li>
+              </Link></li>
             </ul>
             {/* search bar */}
             <form action="">
@@ -98,10 +107,10 @@ const BlogHeader = () => {
           <div className="container-inner">
 
             <ul>
-              <li><a href="/blog">Home</a></li>
-              <li><a href="#">Business</a></li>
+              <li><Link href="/blog">Home</Link></li>
+              <li><Link href="#">Business</Link></li>
               <li><Link href="/#contact">Contact Us</Link></li>
-              <li><a href="#about">About Us</a></li>
+              <li><Link href="/about">About Us</Link></li>
             </ul>
 
             <form action="">

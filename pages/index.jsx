@@ -16,7 +16,6 @@ const Home = ({posts}) => {
       <Head>
         <title>Kimmotech Technologies, Software solutions, Tech Blogs, graphics, web design, seo and more </title>
         <link rel="icon" href="/headicon.png" />
-        
       </Head>
       
       <div>
