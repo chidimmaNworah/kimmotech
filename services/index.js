@@ -169,6 +169,10 @@ export const getPostDetails = async (slug) => {
                     name
                     slug
                 }
+                tags {
+                  name
+                  slug
+              }
                 content {
                     raw
                 }
