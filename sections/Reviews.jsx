@@ -21,11 +21,11 @@ const Reviewer = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1024 },
-      items: 4,
+      items: 3,
     },
     desktop: {
       breakpoint: { max: 1024, min: 768 },
-      items: 3,
+      items: 2,
     },
     tablet: {
       breakpoint: { max: 768, min: 640 },
@@ -54,11 +54,11 @@ const Reviewer = () => {
   );
 
   return (
-    <div className='reviewsBgBlack'>
-      <div><h4 className="font-normal py-5 tracking-wide lg:text-5xl md:text-3xl text-center text-[#D72A06]">CLIENTS REVIEWS <span className='text-white'>ABOUT <br />THE QUALITY OF OUR WORK</span></h4></div>
+    <div className='reviewsBgBlack '>
+      <div><h4 className="font-normal py-5 tracking-wide lg:text-5xl md:text-3xl text-center text-[#D72A06]">CLIENTS REVIEWS <span className='text-[#002438]'>ABOUT <br />THE QUALITY OF OUR WORK</span></h4></div>
  
         
-      <div className="w-full py-10">
+      <div className="container mx-auto w-full py-10">
       
       <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-2">
         {dataLoaded && reviews.map((review, index) => (
@@ -66,8 +66,8 @@ const Reviewer = () => {
         ))}
       </Carousel>
       
-    </div>
-    <ReviewForm />
+      </div>
+      <ReviewForm />
     </div>
   )
 }

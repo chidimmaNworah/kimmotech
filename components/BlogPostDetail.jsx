@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import moment from 'moment'
 import Link from 'next/link';
+import Head from 'next/head';
 import { getBlogCategories } from '../services' 
 import { FaFacebookSquare, FaLinkedin, FaInstagramSquare, FaYoutubeSquare, FaTwitterSquare } from 'react-icons/fa'
 
@@ -60,7 +61,13 @@ const BlogPostDetail = ({post}) => {
     //   }, [])
 
   return (
+    <div>
+      <Head>
+        <title>Kimmotech Blog: Blog details on trending Technologies, Software development, digital marketing and more </title>
+        <link rel="icon" href="/headicon.png" />
+      </Head>
     <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
+      <h1 className="mb-8 text-3xl lg:text-5xl font-bold">{post.title}</h1>
       <div className="relative overflow-hidden shadow-md mb-6">
         <img 
           src={post.featuredImage.url}
@@ -90,7 +97,6 @@ const BlogPostDetail = ({post}) => {
             </div>          
           </div>
         </div>
-      <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
     
       {post.content.raw.children.map((typeObj, index)=>{
         const children = typeObj.children.map((item, itemIndex)=> getContentFragment(itemIndex, item.text, item))
@@ -98,10 +104,10 @@ const BlogPostDetail = ({post}) => {
         return getContentFragment(index, children, typeObj, typeObj.type)
       })}
           <div className="flex flex-wrap gap-2 mt-4">
-            {categories.map((category) => (
-                <Link key={category.slug} href={`/category/${category.slug}`} className="px-3 py-1 text-sm border border-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition">{category.name}</Link>
-            ))}
-        </div>
+          {post.blogcategories.map((category) => (
+              <Link key={category.slug} href={`/blogcategory/${category.slug}`}><p className='px-3 py-1 text-sm border border-gray-200 rounded-sm hover:bg-blue-500 hover:text-white transition cursor-pointer'>{category.name}</p></Link>
+          ))}
+          </div>
         <div className="flex gap-2 border-t pt-5 mt-5">
                 <a href="https://www.facebook.com/Kimmotech-100529069435679/" className='w-8 h-8 rounded-sm flex items-center justify-center border border-gray-400 text-base text-gray-800'>
                   <i><FaFacebookSquare /></i>
@@ -120,6 +126,7 @@ const BlogPostDetail = ({post}) => {
                 </a>
                 </div>
       </div>
+    </div>
     </div>
   )
 }

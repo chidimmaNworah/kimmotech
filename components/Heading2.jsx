@@ -4,7 +4,7 @@ import { Heading3 } from '.'
 
 const Heading2 = () => {
   return (
-    <div className='w-full mx-0 gradient-bg mt-20 mb-8'>
+    <div className='container w-full mx-auto gradient-bg mt-20 mb-8'>
     <div className="max-w-4xl w-full mx-auto px-4">
       <div className="flex flex-col items-center text-center text-[#101035]">
         <h1 className="font-semibold text-2xl mb-4">Why Kimmotech</h1>

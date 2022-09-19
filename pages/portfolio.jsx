@@ -24,7 +24,6 @@ const Home = ({posts}) => {
       <Head>
         <title>Kimmotech and technical services</title>
         <link rel="icon" href="/head_icon.svg" />
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
       </Head>
 
       <Header />

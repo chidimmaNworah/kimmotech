@@ -56,7 +56,7 @@ const FeaturedPosts = () => {
   return (
     <div className='bg-white w-full my-10'>
       <h2 className='text-black text-center font-normal py-5 tracking-wide lg:text-5xl md:text-3xl'>OUR PORTFOLIO & CASE STUDIES</h2>
-    <div className="w-full py-10">
+    <div className="container mx-auto w-full py-10">
       
       <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-2">
         {dataLoaded && featuredPosts.map((post, index) => (

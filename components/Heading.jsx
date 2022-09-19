@@ -6,7 +6,7 @@ const Heading2 = () => {
   return (
     <main>
       {mainDetails.map(detail => (
-        <div key={detail.heading} className="card">  
+        <div key={detail.heading} className="card shadow-lg">  
           <div className='done'>
             <div className='pl-2'>
               <h5 className='font-normal text-[#E54416] mb-1 text-lg'>{detail.heading}</h5>

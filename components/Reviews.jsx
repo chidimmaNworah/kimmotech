@@ -13,7 +13,7 @@ const Reviews = ({review}) => {
           <div className="reviewCard">
           <div className="reviewCard-content">
               <div className="image">
-                <img src="/logo.png" alt="" />
+                <img src="/avatar.jpg" alt="" />
               </div>
               <div className='media-icons'>
                 <i><a href={`https://www.instagram.com/${review.instagram}`}><FaInstagramSquare /></a></i>
@@ -24,7 +24,7 @@ const Reviews = ({review}) => {
                 <span className="name">{review.name}</span>
                 <span className='profession font-semibold'>{review.profession}</span>
                 <p className="text-gray-400 mb-2 font-semibold text-xs">{moment(review.createdAt).format('MMM DD, YYYY')}</p>
-                <span className="profession">{review.testimonial}</span>
+                <span className="profession testimonial">{review.testimonial}</span>
               </div>
               <div className={`button ${review.casestudy ? `visible` : `hidden`}`}>
                 <button>view case study<span><MdOutlineArrowForward className='mt-1 text-lg ml-2'/></span></button>

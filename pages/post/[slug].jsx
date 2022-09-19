@@ -10,7 +10,7 @@ if(router.isFallback){
   return <Loader />
 }
   return (
-    <div className='absolute bg-center bg-no-repeat bg-cover shadow-md inline-block w-full' style={{ backgroundImage: `url('${post.featuredImage.url}')` }}>
+    <div className='absolute w-full left-o bg-center bg-no-repeat bg-cover shadow-md inline-block w-full' style={{ backgroundImage: `url('${post.featuredImage.url}')` }}>
       <Header />
       <div className='absolute w-full pt-10'>
         <div className="container mx-auto px-10 mb-8">

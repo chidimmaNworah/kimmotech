@@ -11,17 +11,18 @@ const Home = ({posts}) => {
 
   return (
     <div className=''>
-    <div className=''>
-    <Header />
       <Head>
-        <title>Kimmotech Technologies, Software solutions, Tech Blogs, graphics, web design, seo and more </title>
+        <title>Kimmotech Tech portfolio, covering: Trending Technologies, Software solutions, Tech Blogs, graphics, web design, seo and more </title>
         <link rel="icon" href="/headicon.png" />
       </Head>
+    <div className=''>
+    <Header />
       
-      <div>
-        <video id='headerVideo' loop={true} autoPlay="autoPlay" muted>
+      <div className=''>
+        <img src="/videoReplacement.jpg" alt="header" id='headerVideo' />
+        {/* <video id='headerVideo' loop={true} autoPlay="autoPlay" muted>
           <source src="/vidfy-african-cheerful-young-stylish-man-and-w_1920x1080.mp4" type="video/mp4"></source>
-        </video>
+        </video> */}
         <div className="headText">
         <div className="caption">
           <h1>
@@ -37,18 +38,21 @@ const Home = ({posts}) => {
         </div>
         </div>
       </div>
-
-      <Heading />
-      <Reviews />
-      <Heading2 />
-      <FeaturedPosts />
-      <Brands />
-      <Heading3 />
-      <Contact />
+      <div className='body-section'>
+          <Heading className=''/>
+          <Reviews />
+          <Heading2 />
+          <FeaturedPosts />
+          <Brands />
+          <Heading3 />
+          <Contact />
+          <Footer />
+      </div>
+     
 
     </div>
 
-    <Footer />
+    
     </div>
   )
 }

@@ -98,10 +98,10 @@ const PostDetail = ({post}) => {
       
         <div className="flex items-center">
           <div>
-            <p className="text-gray-700 text-lg">Categories: <ul className='text-sm inline'> {categories.map((category) => (<Link key={category.slug} href={`/category/${category.slug}`}><li className='inline mr-2 p-2 cursor-pointer'>{category.name}</li></Link>))}</ul></p>
+            <p className="text-gray-700 text-lg">Categories: <ul className='text-sm inline'> {post.categories.map((category) => (<Link key={category.slug} href={`/category/${category.slug}`}><li className='inline mr-2 p-2 cursor-pointer'>{category.name}</li></Link>))}</ul></p>
           </div>
           <div className='ml-8'>
-            <p className="text-gray-700 text-lg">Tags: <ul className='text-sm inline'> {tags.map((tag) => (<Link key={tag.slug} href={`/tag/${tag.slug}`}><li className='inline mr-2 p-2 cursor-pointer'>{tag.name}</li></Link>))}</ul></p>
+            <p className="text-gray-700 text-lg">Tags: <ul className='text-sm inline'> {post.tags.map((tag) => (<Link key={tag.slug} href={`/tag/${tag.slug}`}><li className='inline mr-2 p-2 cursor-pointer'>{tag.name}</li></Link>))}</ul></p>
           </div>
         </div>
       </div>

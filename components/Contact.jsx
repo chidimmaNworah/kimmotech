@@ -45,9 +45,9 @@ const Contact = () => {
 
   return (
       <div id='contact' className='w-full z-10 bg-white my-20'>
-    <div className="container w-full">
-        <div className="flex flex-col space-y-6 md:flex-row lg:space-y-4 w-full max-x-4xl p-8 shadow-lg text-black">
-            <div className="flex flex-col space-y-6 justify-between">
+    <div className="container mx-auto w-full">
+        <div className="flex flex-col space-y-6 md:flex-row w-full p-4 items-center text-black">
+            <div className="flex flex-col lg:w-6/12 w-full justify-between space-y-6">
                 <div className='mr-8'>
                     <h1 className="font-bold text-4xl tracking-wide text-[#E53B0F]">Contact Us</h1>
                     <p className="pt-2 text-black text-sm">
@@ -69,9 +69,9 @@ const Contact = () => {
                     </div></div>
                 </div>
             </div>
-            <div>
-                <div className="bg-white text-gray-600 w-full">
-                        <form action="" className="flex flex-col space-y-4 w-full">
+            <div className='lg:w-6/12 w-full'>
+                <div className="bg-white text-gray-600 w-full shadow p-8 bg-white">
+                        <form action="" className="flex flex-col space-y-4 ">
                             <div>
                             <div>
                                 <label htmlFor="" className="text-sm">Full name</label>

@@ -8,7 +8,7 @@ const Heading2 = () => {
     <div className='w-full mx-0 bg-[#002438] mt-20 pb-20 snap-mandatory snap-y'>
         <h1 className='snap-center font-normal pt-20 tracking-wide lg:text-5xl md:text-3xl text-center text-white mb-20'>EXTENSIVE BUSINESS, TECHNICAL, <br/> AND PROCESS <span className='text-[#D72A06]'>EXPERTISE</span></h1>
         <h1 className='snap-center font-normal py-4 tracking-wide text-2xl text-center text-gray-400 mb-10'>TECHNOLOGY</h1>
-    <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 mx-8 px-8 mb-20">
+    <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 mx-8 px-8 mb-20">
         {heading3DetailsTechnology.map(detail => (
         <div key={detail.heading} className=''>
             <div className="h-full outline outline-[#D72A06] py-8 px-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:shadow-sm duration-300">
@@ -28,7 +28,7 @@ const Heading2 = () => {
     </div>
 
     <h1 className='snap-center font-normal py-4 tracking-wide text-2xl text-center text-gray-400 mb-20'>SOLUTIONS</h1>
-    <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 mx-8 px-8 mb-20">
+    <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 mx-8 px-8 mb-20">
         {heading3DetailsSolutions.map(detail => (
         <div key={detail.heading} className=''>
             <div className="h-full outline outline-[#D72A06] py-8 px-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:shadow-sm duration-300">
@@ -48,7 +48,7 @@ const Heading2 = () => {
     </div>
 
     <h1 className='snap-center font-normal py-4 tracking-wide text-2xl text-center text-gray-400 mb-20'>SERVICE DELIVERY </h1>
-    <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-5 mx-8 px-8 mb-20">
+    <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-5 mx-8 px-8 mb-20">
         {heading3DetailsServiceDelivery.map(detail => (
         <div key={detail.heading} className=''>
             <div className="h-full outline outline-[#D72A06] py-8 px-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:shadow-sm duration-300">

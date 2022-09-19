@@ -84,23 +84,32 @@ ul{
     color: #fff;
 }
 
+.body-section{
+    position: absolute;
+    top: 80vh;
+    left: 0;
+    width: 100%;
+}
+
 main {
     width: 100%;
     padding: 2em;
-    background: #002438;
+    /* background: #002438; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    /* padding: 30px; */
 }
 
 main .card{
     width: 20rem;
     height: 18.5rem;
     background: #002438;
-    box-shadow: 0px 0px 0.5px 0.3px #000813;
+    /* box-shadow: 0px 0px 0.5px 1px #000813; */
     cursor: pointer;
     overflow: hidden;
     margin-bottom: 2rem;
+    margin: 10px;
 }
 
 main .card::before{
@@ -125,9 +134,9 @@ main .card:hover::before{
 }
 
 main .done{
-    color: #fff;
+    color: #000;
     position: absolute;
-    background-color: #002438;
+    background-color: #ffff;
     display: flex;
     font-size: 17px;
     align-items: center;
@@ -312,7 +321,7 @@ nav .fa-bars:hover{
 
 /* style for reviews section */
 .reviewsBgBlack{
-    background: #002438;
+    background: #fff;
     padding-bottom: 3rem;
     position: relative;
 }
@@ -338,17 +347,17 @@ div .reviewCard .image img{
 }
 .reviewCard{
     position: relative;
-    background: #fff;
+    /* background: lightgray; */
     /* overflow: auto; */
     margin: 20px 0;
     width: 100%;
-    height: 28rem;
+    height: 30rem;
 }
 .reviewCard:before{
     content: "";
     position: absolute;
     left: 0;
-    height: 35%;
+    height: 30%;
     width: 100%;
     background: #D72A06;
     /* border-radius: 20px 20px 0 0; */
@@ -357,7 +366,7 @@ div .reviewCard .image img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    padding: 16px;
     position: relative;
     z-index: 19;
     overflow: auto;
@@ -397,6 +406,9 @@ div .reviewCard .image img{
     font-size: 15px;
     font-weight: 500;
 }
+/* .name-profession .testimonial{
+    text-align: justify;
+} */
 .reviewCard .button{
     display: flex;
     justify-content: space-around;

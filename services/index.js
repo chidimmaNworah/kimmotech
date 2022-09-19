@@ -30,6 +30,10 @@ export const getPosts = async () => {
                         name
                         slug
                     }
+                    tags {
+                      name
+                      slug
+                  }
                     }
                 }
             }
@@ -422,6 +426,32 @@ export const getComments = async (slug) => {
     `
     const result = await request(graphqlAPI, query, {slug});
     return result.comments
+}
+
+export const submitBlogComment = async (obj) =>{
+  const result = await fetch('/api/blogComments', {
+      method: 'POST',
+      headers:{
+          'Content-type': 'application/json'
+      },
+      body: JSON.stringify(obj),
+  })
+
+  return result.json()
+}
+
+export const getBlogComments = async (slug) => {
+  const query = gql`
+      query GetBlogComments ($slug: String!) {
+      blogComments(where: {blogPost: {slug: $slug}}) {
+          name
+          createdAt
+          comment
+      }
+      }
+  `
+  const result = await request(graphqlAPI, query, {slug});
+  return result.blogComments
 }
 
 export const getFeaturedPosts = async () => {

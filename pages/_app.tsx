@@ -6,26 +6,20 @@ import '../styles/globals.scss'
 import '../styles/style.css'
 import type { AppProps } from 'next/app'
 import {SSRProvider} from '@react-aria/ssr'
-import TagManager from 'react-gtm-module'
+import TagManager, {TagManagerArgs} from 'react-gtm-module'
 import { type } from 'os'
 import { stringifyForDisplay } from '@apollo/client/utilities'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-React.useEffect(() => {
-  // const tagManagerArgs = {
-  //   gtmid: 'GTM-PRDB4F4'
-  // }
-  
-  // TagManager.initialize(tagManagerArgs)
-  if(typeof window !== 'undefined'){
-    console.log('init gtm')
-    TagManager.initialize({gtmId: 'GTM-PRDB4F4'})
-  }else {
-    console.log('GTM server side -ignoring')
-  }
-}, [])
+const gtmId = process.env.NEXT_PUBLIC_GTM_ID || ""
+const tagManagerArgs: TagManagerArgs = {
+  gtmId,
+}
 
+useEffect(() => {
+  TagManager.initialize(tagManagerArgs)
+}, [])
   return (
     <SSRProvider>
     <Layout>

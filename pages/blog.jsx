@@ -9,6 +9,7 @@ import "swiper/css/bundle";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { getBlogCategories, getTags } from '../services' 
 import Link from 'next/link'
+import Head from 'next/head'
 import { BlogFeaturedPosts } from '../sections'
 
 
@@ -47,6 +48,10 @@ const Home = ({posts}) => {
 
   return (
     <div>
+      <Head>
+        <title>Kimmotech Blog: Articles on trending Technologies, Software development, digital marketing and more </title>
+        <link rel="icon" href="/headicon.png" />
+      </Head>
       <BlogHeader />
 
       <div className='absolute top-0 left-0 w-full'>
