@@ -83,7 +83,7 @@ const BlogPostDetail = ({post}) => {
               alt='kimmotech'
               height="30px"
               width="30px"
-              className="align-middle rounded-full"
+              className="align-middle"
             />
             <p className="inline align-middle text-gray-700 ml-2 text-lg">Kimmotech</p>
             

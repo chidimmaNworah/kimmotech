@@ -14,7 +14,6 @@ if(router.isFallback){
       <Head>
         <title>FTS Blog</title>
         <link rel="icon" href="/head_icon.svg" />
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script noModule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       </Head>
